@@ -1,0 +1,16 @@
+{
+  "name": "homework19",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "mongodb": "^7.0.0",
+    "mongoose": "^7.8.7"
+  }
+}
