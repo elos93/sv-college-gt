@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>שיעורי בית 11</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>שיעורי בית 11 - Arrow Function • Map/forEach • Filter • Spread</h1>
+
+  <!-- Arrow Function -->
+  <section class="task">
+    <h2>Arrow Function</h2>
+
+    <h3>1. בדיקה אם מחרוזת ארוכה מ־5 תווים</h3>
+    <input type="text" id="str1" placeholder="הכנס מחרוזת">
+    <button onclick="checkLength()">בדוק</button>
+    <p id="result1"></p>
+
+    <h3>2. בדיקה אם התו הראשון והאחרון זהים</h3>
+    <input type="text" id="str2" placeholder="הכנס מחרוזת">
+    <button onclick="checkFirstLast()">בדוק</button>
+    <p id="result2"></p>
+
+    <h3>3. בדיקה אם התו האחרון אות גדולה</h3>
+    <input type="text" id="str3" placeholder="הכנס מחרוזת">
+    <button onclick="checkLastUpper()">בדוק</button>
+    <p id="result3"></p>
+  </section>
+
+  <!-- Map / forEach -->
+  <section class="task">
+    <h2>Map / forEach</h2>
+
+    <h3>1. הדפסת מספרים במערך שמתחלקים ב־3</h3>
+    <input type="text" id="arr1" placeholder="לדוגמה: 2,3,6,7,9">
+    <button onclick="checkDivisible()">בדוק</button>
+    <p id="result4"></p>
+
+    <h3>2. יצירת מערך חדש U/L לפי אותיות</h3>
+    <input type="text" id="arr2" placeholder="לדוגמה: A,B,c,d,E">
+    <button onclick="checkLetters()">בדוק</button>
+    <p id="result5"></p>
+  </section>
+
+  <!-- Map 3 + Filter 4–5 + Spread 6–7 -->
+  <section class="task">
+    <h2>Map • Filter • Spread — המשך</h2>
+
+    <h3>3. Map — החלפת איבר שנמצא באינדקס זוגי באינדקס עצמו</h3>
+    <input type="text" id="arr3" placeholder="לדוגמה: a,b,c,d,e,f">
+    <button onclick="mapEvenIndexToIndex()">החלף</button>
+    <p id="result6"></p>
+
+    <h3>4. Filter — החזר גילאים מעל 18 בלבד</h3>
+    <input type="text" id="ages" placeholder="לדוגמה: 12,18,19,25,7">
+    <button onclick="filterAdults()">סנן</button>
+    <p id="result7"></p>
+
+    <h3>5. Filter — ייצור מערך חדש ללא אינדקס 3 (או לבחירתך)</h3>
+    <input type="text" id="arr4" placeholder="לדוגמה: 2,4,1,2,7,2,8">
+    <input type="number" id="removeIndex" placeholder="אינדקס למחיקה (ברירת מחדל 3)">
+    <button onclick="removeAtIndex()">הסר</button>
+    <p id="result8"></p>
+
+    <h3>6. Spread — הוספת שם למערך שמות (ללא שינוי המקור)</h3>
+    <input type="text" id="names1" placeholder="לדוגמה: דני,רות">
+    <input type="text" id="newName" placeholder="שם חדש: למשל אורי">
+    <button onclick="addNameUI()">הוסף</button>
+    <p id="result9"></p>
+
+    <h3>7. Spread — איחוד שני מערכי שמות למערך אחד</h3>
+    <input type="text" id="namesA" placeholder="מערך א׳: לדוגמה רן,דנה">
+    <input type="text" id="namesB" placeholder="מערך ב׳: לדוגמה דנה,תמר">
+    <label class="inline">
+      <input type="checkbox" id="uniqueOnly"> הסר כפילויות
+    </label>
+    <button onclick="mergeNamesUI()">אחד</button>
+    <p id="result10"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
