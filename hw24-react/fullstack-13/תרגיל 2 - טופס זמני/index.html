@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>טופס טיוטה | SessionStorage</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📋 טופס טיוטה</h1>
+      <p class="subtitle">נשמר זמנית רק בלשונית הנוכחית (SessionStorage)</p>
+    </header>
+
+    <section class="card">
+      <form id="draft-form" autocomplete="off">
+        <div class="grid">
+          <label>
+            שם מלא
+            <input id="name" type="text" placeholder="לדוגמה: ישראל ישראלי" />
+          </label>
+          <label>
+            אימייל
+            <input id="email" type="email" placeholder="name@example.com" />
+          </label>
+        </div>
+        <div class="actions">
+          <button type="button" id="reset-btn" class="btn btn-ghost">איפוס טיוטה</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <small>מפתח אחסון: <code>formDraft</code></small>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

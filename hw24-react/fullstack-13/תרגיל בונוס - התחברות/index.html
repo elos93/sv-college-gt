@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>התחברות | LocalStorage</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🔐 התחברות</h1>
+      <p class="subtitle">דוגמת Login עם שמירת משתמש ב-LocalStorage</p>
+    </header>
+
+    <section id="auth-card" class="card">
+      <form id="login-form" autocomplete="off" class="hidden">
+        <div class="grid">
+          <label>
+            שם משתמש
+            <input id="username" type="text" placeholder="ADMIN" />
+          </label>
+          <label>
+            סיסמה
+            <input id="password" type="password" placeholder="123456" />
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn">Login</button>
+        </div>
+      </form>
+
+      <div id="welcome" class="welcome hidden">
+        <h2 id="greet"></h2>
+        <button id="logout-btn" class="btn btn-ghost">Logout</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>מפתח אחסון: <code>loggedUser</code></small>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

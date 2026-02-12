@@ -1,0 +1,32 @@
+/* שימוש באותו קו עיצובי מתרגיל 1 */
+:root{
+  --bg:#0b1020; --card:#131a2e; --text:#eaf0ff; --muted:#9fb0ff; --ring:#7fb3ff33;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:system-ui,Segoe UI,Roboto,Heebo,sans-serif;
+  background: radial-gradient(1200px 600px at 20% -20%, #2a3b7e22, transparent) , var(--bg);
+  color:var(--text); display:grid; place-items:center; padding:24px; min-height:100svh;
+}
+.container{max-width:720px; width:100%}
+h1{margin:.2em 0; font-size:2rem}
+.subtitle{color:var(--muted); margin:0 0 1rem}
+.card{
+  background:linear-gradient(180deg,#161f37 0%, #0e1427 100%);
+  border:1px solid #ffffff12; border-radius:18px; padding:18px; box-shadow:0 10px 30px #0006;
+}
+.grid{display:grid; gap:12px; grid-template-columns:1fr 1fr}
+label{display:grid; gap:6px; font-size:.95rem}
+input{
+  padding:12px 14px; border-radius:12px; border:1px solid #ffffff1a; background:#0a0f1f; color:var(--text);
+  outline:none; box-shadow:0 0 0 0 var(--ring);
+}
+input:focus{box-shadow:0 0 0 6px var(--ring)}
+.btn{
+  padding:12px 16px; border-radius:12px; border:1px solid #ffffff2e; background:transparent;
+  color:var(--text); cursor:pointer; transition:.2s transform,.2s filter;
+}
+.btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+.actions{display:flex; justify-content:flex-end; margin-top:8px}
+footer{margin-top:12px; color:#93a3ff88}
+@media (max-width:640px){ .grid{grid-template-columns:1fr} }

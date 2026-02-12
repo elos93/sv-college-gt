@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>רשימת מטלות | LocalStorage</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📝 רשימת מטלות</h1>
+      <p class="subtitle">נשמר אוטומטית ב-LocalStorage גם אחרי רענון</p>
+    </header>
+
+    <section class="card">
+      <div class="input-row">
+        <input id="todo-input" type="text" placeholder="מה תרצה להוסיף?" />
+        <button id="add-btn" class="btn">הוסף משימה</button>
+      </div>
+
+      <ul id="todo-list" class="list"></ul>
+
+      <div class="actions">
+        <button id="clear-btn" class="btn btn-ghost">נקה הכל</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>מפתח אחסון: <code>todos</code></small>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

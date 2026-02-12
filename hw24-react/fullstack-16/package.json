@@ -1,0 +1,28 @@
+{
+  "name": "16",
+  "version": "1.0.0",
+  "description": "Homework 16 - Node.js practice using dayjs, lodash, zod, validator and uuid.",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "node",
+    "dayjs",
+    "lodash",
+    "zod",
+    "validator",
+    "uuid",
+    "homework"
+  ],
+  "author": "Asher Elos",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "lodash": "^4.17.21",
+    "uuid": "^13.0.0",
+    "validator": "^13.15.20",
+    "zod": "^4.1.12"
+  }
+}
