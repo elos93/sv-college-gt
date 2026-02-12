@@ -1,0 +1,119 @@
+/* ==========================
+   גרסת Light עם ניווט פנימי
+   ========================== */
+:root{
+  --bg:#f6f8fb;
+  --panel:#ffffff;
+  --card:#ffffff;
+  --border:#e4e8ef;
+  --muted:#5f6b7a;
+  --text:#0f172a;
+  --brand:#1457d2;
+  --accent:#2563eb;
+  --accent-2:#3b82f6;
+  --shadow: 0 10px 28px rgba(17,24,39,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(700px 300px at 10% -10%, #e9f0ff 0%, rgba(233,240,255,0) 60%),
+    radial-gradient(900px 400px at 90% -20%, #ffe9f0 0%, rgba(255,233,240,0) 60%),
+    var(--bg);
+  color: var(--text);
+  line-height:1.75;
+}
+
+/* Containers */
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Header + Nav */
+.site-header{
+  position: sticky; top:0; z-index:10;
+  background: rgba(255,255,255,.8);
+  backdrop-filter: saturate(160%) blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{font-size:28px}
+.brand-text h1{font-size:22px;line-height:1.1;margin:0;color:var(--brand)}
+.brand-text p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.top-nav{display:flex;gap:10px;flex-wrap:wrap}
+.top-nav a{
+  text-decoration:none;color:#0b2b6b;background:#eef4ff;border:1px solid #dbe7ff;
+  padding:8px 10px;border-radius:10px;font-weight:600;transition:filter .2s, transform .05s;
+}
+.top-nav a:hover{filter:brightness(1.03)}
+.top-nav a:active{transform:translateY(1px)}
+
+/* Sections + Cards */
+.section{padding:20px}
+.section-header h2{margin:0 0 4px;color:var(--brand)}
+.section-header p{margin:0 0 12px}
+.card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow: var(--shadow);
+  margin:18px 0;
+}
+
+/* Forms */
+.form-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0 10px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:220px;flex:1}
+.label{font-size:13px;color:var(--muted)}
+input[type="text"],input[type="number"]{
+  color:var(--text); background:#fff; border:1px solid #ccd6e3;
+  padding:12px 14px; border-radius:12px; outline:none; transition:border-color .2s, box-shadow .2s;
+}
+input::placeholder{color:#9aa8bb}
+input:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+
+/* Buttons */
+.btn{
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color:#ffffff; border:none; border-radius:12px; padding:10px 16px; cursor:pointer;
+  font-weight:700; box-shadow: 0 6px 16px rgba(37,99,235,.25);
+  transition: transform .05s ease, filter .2s ease;
+}
+.btn:hover{filter:brightness(1.03)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{}
+
+/* Layout blocks */
+.grid{display:grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));gap:12px;margin-top:8px}
+.stack{display:grid;gap:10px}
+.preview{margin-top:8px}
+.note{margin-top:8px;color:var(--muted);font-size:.95em}
+.backtop{margin-top:10px}
+.backtop a{text-decoration:none;color:var(--brand)}
+
+/* Cards inside lists */
+.product, .book-card{
+  background:#ffffff; border:1px solid var(--border); border-radius:12px; padding:12px;
+}
+
+/* Table */
+.table-wrap{overflow:auto;border-radius:12px;border:1px solid var(--border);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:520px;background:#fff}
+th,td{border:1px solid var(--border);padding:10px;text-align:center}
+thead th{background:#f1f5ff}
+tfoot td{background:#f1f5ff;font-weight:700}
+
+/* Todo */
+.todo-item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#ffffff;border:1px solid var(--border);border-radius:12px;padding:10px}
+
+/* Misc */
+.muted{color:var(--muted)}
+.divider{border:none;height:1px;background:var(--border);margin:26px 0}
+.hidden{display:none}
+.mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;border:1px dashed var(--border);border-radius:12px;padding:12px;min-height:44px;background:#fff}
+
+/* Colors grid */
+.colors{margin-top:12px}
+.square{width:64px;height:64px;border:1px solid var(--border);border-radius:12px;display:inline-block;margin:6px;cursor:pointer;box-shadow: var(--shadow)}

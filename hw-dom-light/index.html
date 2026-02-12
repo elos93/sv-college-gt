@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>שיעורי בית DOM – גרסת Light עם ניווט</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header + Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🧩</span>
+        <div class="brand-text">
+          <h1>שיעורי בית DOM</h1>
+          <p>גרסת Light • ניווט מהיר • קוד ברור</p>
+        </div>
+      </div>
+      <nav class="top-nav" aria-label="ניווט פנימי">
+        <a href="#ex1">DOM 1</a>
+        <a href="#ex2">DOM 2</a>
+        <a href="#adv1">מתקדם 1</a>
+        <a href="#adv2">מתקדם 2</a>
+        <a href="#adv3">מתקדם 3</a>
+        <a href="#adv4">מתקדם 4</a>
+        <a href="#bonus">בונוס</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <!-- EX1 -->
+    <section id="ex1" class="card section">
+      <div class="section-header">
+        <h2>תרגיל DOM 1 – יצירת DIV עם שתי פסקאות</h2>
+        <p class="muted">הפונקציה מקבלת שם פרטי ומשפחה, בונה מבנה HTML לפי הכללים, ומוסיפה אותו ל־<code>body</code>.</p>
+      </div>
+
+      <div class="form-row">
+        <label class="field">
+          <span class="label">שם פרטי</span>
+          <input id="firstName" type="text" placeholder="לדוגמה: אשר" />
+        </label>
+        <label class="field">
+          <span class="label">שם משפחה</span>
+          <input id="lastName" type="text" placeholder="לדוגמה: אלוס" />
+        </label>
+        <button id="createNameBtn" class="btn primary">צור DIV</button>
+      </div>
+
+      <div class="preview" id="ex1Preview" aria-live="polite"></div>
+      <div class="note">שימו לב: הפריט שנוצר מתווסף גם ל־<code>body</code> (כנדרש), וגם מוצג כאן לתצוגה.</div>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <!-- EX2 -->
+    <section id="ex2" class="card section">
+      <div class="section-header">
+        <h2>תרגיל DOM 2 – אתר מודעות מכירה (oninput)</h2>
+        <p class="muted">שדה יחיד לקבלת מספר. בכל הקלדה מוצגים רק מוצרים שמחירם קטן/שווה לערך שהוזן.</p>
+      </div>
+
+      <div class="form-row">
+        <label class="field max-field">
+          <span class="label">מחיר מקסימלי</span>
+          <input id="maxPrice" type="number" min="0" inputmode="numeric" placeholder="הכנס/י מחיר (למשל 200)" />
+        </label>
+      </div>
+
+      <div id="products" class="grid" aria-live="polite"></div>
+      <p id="productsEmpty" class="muted hidden">אין מוצרים בטווח המחיר שנבחר.</p>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <hr class="divider"/>
+
+    <!-- ADV1 -->
+    <section id="adv1" class="card section">
+      <div class="section-header">
+        <h2>מתקדם 1 – חיפוש ספרים לפי כותרת</h2>
+        <p class="muted">שם הספר בבולד, המחבר בכחול, השנה באפור קטן. אם אין תוצאות – יוצאת הודעה מתאימה.</p>
+      </div>
+
+      <div class="form-row">
+        <label class="field max-field">
+          <span class="label">חיפוש לפי כותרת</span>
+          <input id="bookSearch" type="text" placeholder="הקלד/י מילת חיפוש..." />
+        </label>
+      </div>
+
+      <div id="booksList" class="stack"></div>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <!-- ADV2 -->
+    <section id="adv2" class="card section">
+      <div class="section-header">
+        <h2>מתקדם 2 – טבלה דו־ממדית + ממוצעי עמודות</h2>
+        <p class="muted">לחצן מחשב ממוצע לכל עמודה בעזרת <code>reduce</code> ומציג שורה מסכמת בתחתית הטבלה.</p>
+      </div>
+
+      <div class="actions">
+        <button id="calcAvgBtn" class="btn">חשב ממוצעים</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="gradesTable">
+          <thead></thead>
+          <tbody></tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <!-- ADV3 -->
+    <section id="adv3" class="card section">
+      <div class="section-header">
+        <h2>מתקדם 3 – רשימת משימות עם מחיקה</h2>
+        <p class="muted">בלחיצה על "מחק" המשימה נמחקת מהמערך ומהמסך. אם אין משימות – תופיע הודעה.</p>
+      </div>
+
+      <div id="todoList" class="stack"></div>
+      <p id="todoEmpty" class="muted hidden">כל המשימות בוצעו!</p>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <!-- ADV4 -->
+    <section id="adv4" class="card section">
+      <div class="section-header">
+        <h2>מתקדם 4 – מיון מספרים בלחיצה</h2>
+        <p class="muted">בכל לחיצה, הכיוון מתחלף: קטן→גדול ואז גדול→קטן.</p>
+      </div>
+
+      <div class="form-row">
+        <button id="sortBtn" class="btn">מיין מהקטן לגדול</button>
+        <span id="sortState" class="muted">(לא ממוין)</span>
+      </div>
+
+      <div id="numbersOut" class="mono"></div>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+
+    <!-- BONUS -->
+    <section id="bonus" class="card section">
+      <div class="section-header">
+        <h2>מתקדם 5 (בונוס) – משחק צבעים</h2>
+        <p class="muted">בלחיצה נוצרים ריבועי צבע; לחיצה על ריבוע מציגה "בחרת בצבע: X".</p>
+      </div>
+
+      <div class="actions">
+        <button id="makeColors" class="btn">צור צבעים</button>
+      </div>
+
+      <div id="colorSquares" class="colors" aria-live="polite"></div>
+      <p id="colorPicked" class="muted"></p>
+      <p class="backtop"><a href="#top">חזרה לראש הדף ↑</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="top" class="site-footer">
+    <div class="container">
+      <p class="muted">© פתרונות DOM – גרסת Light עם ניווט פנימי. HTML • CSS • JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
