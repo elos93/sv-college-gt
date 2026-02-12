@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1 class="center">Sign up</h1>
+
+      <!-- דרישה: form + POST /signup, ולידציות בצד שרת -->
+      <form action="/signup" method="post" class="stack">
+        <label for="u">Username (4–8)</label>
+        <input id="u" name="username" required minlength="4" maxlength="8" />
+
+        <label for="e">Email (contains @)</label>
+        <input id="e" name="email" type="email" required />
+
+        <label for="p">Password (5–10, must include $)</label>
+        <input
+          id="p"
+          name="password"
+          type="password"
+          required
+          minlength="5"
+          maxlength="10"
+        />
+
+        <label for="c">Confirm Password</label>
+        <input
+          id="c"
+          name="confirmPassword"
+          type="password"
+          required
+          minlength="5"
+          maxlength="10"
+        />
+
+        <button>Sign up</button>
+      </form>
+
+      <div class="center" style="margin-top: 8px">
+        <a href="/login">Back to login</a>
+      </div>
+    </main>
+  </body>
+</html>

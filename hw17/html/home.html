@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="card center">
+      <h1 id="title">Home</h1>
+      <p class="muted"><a href="/login">Log out</a></p>
+    </main>
+
+    <script>
+      // מציג hello Username לפי הפרמטר בכתובת ?user=...
+      const params = new URLSearchParams(location.search);
+      const user = params.get("user") || "USER";
+      document.getElementById("title").textContent = `hello ${user}`;
+    </script>
+  </body>
+</html>

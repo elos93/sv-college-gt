@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>שיעורי בית 15</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>שיעורי בית 15  JS</h1>
+      
+      <!-- תרגיל 1 -->
+      <section class="card" id="task1">
+        <h2>תרגיל 1: שינוי צבע עם ביטול (setTimeout + clearTimeout)</h2>
+        <div class="actions">
+          <button id="btn-change">שינוי צבע</button>
+          <button id="btn-cancel" class="secondary">ביטול</button>
+        </div>
+        <div id="color-box" class="box" aria-label="תיבת צבע"></div>
+        <p class="hint">לחיצה על "שינוי צבע" תחכה 2 שניות ואז תהפוך את הצבע לכחול. אם לוחצים "ביטול" בזמן ההמתנה  הפעולה מתבטלת.</p>
+      </section>
+
+      <!-- תרגיל 2 -->
+      <section class="card" id="task2">
+        <h2>תרגיל 2: שעון עצר יורד (setTimeout)</h2>
+        <div class="timer-controls">
+          <label for="seconds-input">משך בשניות:</label>
+          <input id="seconds-input" type="number" min="1" value="10" />
+          <button id="timer-start">התחל</button>
+          <button id="timer-reset" class="secondary">איפוס</button>
+        </div>
+        <div id="timer-display" class="timer-display">לחץ "התחל"</div>
+      </section>
+
+      <!-- תרגיל 3 -->
+      <section class="card" id="task3">
+        <h2>תרגיל 3: פונקציה customIndexOf</h2>
+        <form id="indexof-form" class="form-grid" onsubmit="return false;">
+          <label for="str-input">מחרוזת</label>
+          <input id="str-input" type="text" placeholder="לדוגמה: hello world" />
+          
+          <label for="char-input">תו לחיפוש</label>
+          <input id="char-input" type="text" maxlength="1" placeholder="לדוגמה: o" />
+          
+          <button id="indexof-run">הרץ</button>
+        </form>
+        <div id="indexof-output" class="output" aria-live="polite"></div>
+      </section>
+
+      <!-- תרגיל 4 -->
+      <section class="card" id="task4">
+        <h2>תרגיל 4: fetch  הצגת משתמשים (שם + עיר)</h2>
+        <div class="actions">
+          <button id="load-users">טען משתמשים</button>
+        </div>
+        <div id="users-state" class="hint"></div>
+        <ul id="users-list" class="list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

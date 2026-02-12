@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forgot password</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1 class="center">שכחתי סיסמה</h1>
+
+      <form action="/forgot" method="post" class="stack">
+        <label for="e">Email</label>
+        <input id="e" name="email" type="email" required />
+        <button>Send reset link</button>
+      </form>
+
+      <div class="center" style="margin-top: 8px">
+        <a href="/login">Back to login</a>
+      </div>
+    </main>
+  </body>
+</html>

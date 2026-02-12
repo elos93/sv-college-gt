@@ -1,0 +1,114 @@
+
+:root{
+  --bg:#0b1020;
+  --card:#141a2d;
+  --text:#e8ecf1;
+  --muted:#aab4c3;
+  --accent:#5aa9ff;
+  --accent-2:#1f6feb;
+  --success:#1f9d55;
+  --danger:#e11d48;
+  --border: #28324a;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  max-width:900px;
+  margin:24px auto 64px;
+  padding:0 16px;
+}
+
+h1{font-size:clamp(24px,4vw,34px);margin:0 0 18px}
+h2{font-size:clamp(18px,3vw,22px);margin:0 0 12px}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+  margin:16px 0;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:8px 0 14px;
+}
+
+button{
+  border:1px solid var(--border);
+  background:var(--accent);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  transition:transform .08s ease, opacity .2s ease;
+}
+button.secondary{ background:#2a3350; color:var(--text); }
+button:disabled{ opacity:.6; cursor:not-allowed }
+button:active{ transform:scale(.98) }
+
+.box{
+  width:140px;height:140px;
+  border-radius:16px;border:1px solid var(--border);
+  background:#fff;
+}
+
+.hint{ color:var(--muted); font-size:.95rem }
+
+.timer-controls{
+  display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:10px 0 14px;
+}
+#seconds-input{
+  width:120px; padding:10px; border-radius:10px; border:1px solid var(--border);
+  background:#0e1326; color:var(--text);
+}
+
+.timer-display{
+  font-size:2rem; font-weight:700;
+  padding:14px 0;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:110px 1fr 120px;
+  gap:10px;
+  align-items:center;
+}
+.form-grid input{
+  padding:10px; border-radius:10px; border:1px solid var(--border);
+  background:#0e1326; color:var(--text);
+}
+.form-grid button{ grid-column:3 / 4 }
+
+.output{
+  margin-top:10px;
+  padding:12px;
+  border:1px dashed var(--border);
+  border-radius:12px;
+  background:#0f1630;
+  min-height:40px;
+}
+
+.list{
+  list-style:none; padding:0; margin:10px 0 0;
+}
+.list li{
+  padding:10px 12px; border:1px solid var(--border);
+  border-radius:12px; margin-bottom:8px;
+  display:flex; justify-content:space-between; gap:12px;
+  background:#0e152b;
+}
+.list .city{ color:var(--muted) }
